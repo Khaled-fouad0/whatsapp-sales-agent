@@ -17,7 +17,8 @@ Part of the **AI Business Automation Suite** — Phase 2 of 4.
 
 ![WhatsApp Sales Agent Demo](screenshot.png)
 
-*(FastAPI interactive docs showing the /whatsapp endpoint — see Testing section for a real WhatsApp conversation walkthrough)*
+*A real WhatsApp conversation — the agent answered in English, switched
+to Arabic mid-conversation, and handled an off-script question naturally.*
 
 ---
 
