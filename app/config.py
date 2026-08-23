@@ -1,6 +1,6 @@
 """
 Project Configuration
-======================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Reads secret API keys from the .env file.
 If any required key is missing, the project automatically
 falls back to "mock mode" (simulated AI responses, no real
