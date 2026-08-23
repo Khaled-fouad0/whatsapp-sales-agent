@@ -1,4 +1,4 @@
-# 💬 AI WhatsApp Sales Agent
+# AI WhatsApp Sales Agent
 
 > An AI-powered WhatsApp agent that answers customer messages automatically, understands their intent, and replies naturally in their own language — no human agent required.
 
@@ -31,19 +31,19 @@ This project answers real WhatsApp messages with an AI sales agent that:
 - Remembers the conversation across multiple messages from the same sender
 - Runs fully in **mock mode** with zero API keys — so anyone can try it in under a minute
 
-> 🎯 **Mock Mode by default** — no real API keys needed to explore the code and logic. Add real keys to `.env` and it automatically switches to production mode.
+> **Mock Mode by default** — no real API keys needed to explore the code and logic. Add real keys to `.env` and it automatically switches to production mode.
 
 ---
 
 ## Features
 
-- 💬 **Real WhatsApp message handling** via Twilio WhatsApp API
-- 🧠 **Context-aware replies** powered by Groq (Llama 3.3 70B) — free tier, no OpenAI cost
-- 🌍 **Automatic language matching** — replies in Arabic or English based on what the customer wrote
-- 🧵 **Per-sender conversation memory** — remembers context across multiple messages
-- 🎭 **Mock mode** — full functionality testable with zero API keys or cost
-- 🐳 **Dockerized** — app + ngrok tunnel run together with one command
-- ✅ **Automated tests** — Pytest suite covering all endpoints
+- **Real WhatsApp message handling** via Twilio WhatsApp API
+- **Context-aware replies** powered by Groq (Llama 3.3 70B) — free tier, no OpenAI cost
+- **Automatic language matching** — replies in Arabic or English based on what the customer wrote
+- **Per-sender conversation memory** — remembers context across multiple messages
+- **Mock mode** — full functionality testable with zero API keys or cost
+- **Dockerized** — app + ngrok tunnel run together with one command
+- **Automated tests** — Pytest suite covering all endpoints
 
 ---
 
@@ -51,7 +51,7 @@ This project answers real WhatsApp messages with an AI sales agent that:
 
 ```mermaid
 flowchart LR
-    A[💬 Customer sends message] --> B[Twilio WhatsApp Number]
+    A[Customer sends message] --> B[Twilio WhatsApp Number]
     B --> C[FastAPI Webhook]
     C --> D[Sales Agent Logic<br/>Groq / Llama 3.3]
     D --> E[Reply sent back]
@@ -68,7 +68,7 @@ flowchart LR
 
 ---
 
-## 📈 Why This Matters (Industry Data)
+## Why This Matters (Industry Data)
 
 AI messaging agents aren't a novelty — they're becoming standard infrastructure for customer-facing businesses:
 
@@ -81,7 +81,7 @@ AI messaging agents aren't a novelty — they're becoming standard infrastructur
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 whatsapp-sales-agent/
@@ -103,7 +103,7 @@ whatsapp-sales-agent/
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -117,7 +117,7 @@ whatsapp-sales-agent/
 
 ---
 
-## 🚀 Setup & Run
+## Setup & Run
 
 ### 1. Clone the repository
 
@@ -157,7 +157,7 @@ Interactive docs at `http://localhost:8001/docs`
 
 ---
 
-## 🔌 API Reference
+## API Reference
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -178,17 +178,17 @@ In the Twilio Console → Messaging → Try it out → Send a WhatsApp message, 
 
 ---
 
-## ✅ Tested & Verified
+## Tested & Verified
 
 This project has been tested with a real end-to-end WhatsApp conversation, not just simulated requests:
-- ✅ Twilio receives the message and triggers the webhook
-- ✅ The agent understands Arabic and English, including mid-conversation language switches
-- ✅ Conversation memory persists correctly across multiple messages from the same sender
-- ✅ Groq generates context-aware, coherent replies — including handling unexpected/off-script questions gracefully
+- Twilio receives the message and triggers the webhook
+- The agent understands Arabic and English, including mid-conversation language switches
+- Conversation memory persists correctly across multiple messages from the same sender
+- Groq generates context-aware, coherent replies — including handling unexpected/off-script questions gracefully
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 ```bash
 pytest tests/ -v
@@ -198,7 +198,7 @@ pytest tests/ -v
 
 ---
 
-## 🔒 Notes
+## Notes
 
 - Session storage (`active_sessions`) is in-memory — restarting the server clears all active conversations. Use Redis for multi-instance production deployments.
 - This uses Twilio's **WhatsApp Sandbox**, meant for development/testing — production deployment requires WhatsApp Business API approval through Twilio or Meta directly.
@@ -206,7 +206,7 @@ pytest tests/ -v
 
 ---
 
-## 🚧 Possible Extensions
+## Possible Extensions
 
 - [ ] Redis-backed session storage for multi-instance deployments
 - [ ] Migrate from Sandbox to approved WhatsApp Business API for production
@@ -217,7 +217,7 @@ pytest tests/ -v
 
 ---
 
-## 🗺️ Roadmap (AI Business Automation Suite)
+## Roadmap (AI Business Automation Suite)
 
 - [x] **Phase 1:** Voice Sales Agent
 - [x] **Phase 2:** WhatsApp Sales Agent ← *We are here*
@@ -227,7 +227,7 @@ pytest tests/ -v
 
 ---
 
-## 👤 Author
+## Author
 
 Built by **Khaled** 🤙🏽
 
