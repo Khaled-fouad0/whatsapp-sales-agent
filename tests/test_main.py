@@ -1,6 +1,6 @@
 """
 Basic Unit Tests
-================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Run with: pytest tests/ -v
 """
 
