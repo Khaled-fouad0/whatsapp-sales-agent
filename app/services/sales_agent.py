@@ -1,11 +1,9 @@
 """
 Sales Agent Service (WhatsApp)
-================================
-This is the "brain" of the agent. It takes the customer's
-WhatsApp message and returns a smart sales reply.
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+takes the customer's WhatsApp message and returns a smart sales reply.
 Two modes:
-1) Mock Mode: simple keyword-based replies - for testing without API keys.
+1) Mock Mode: keyword-based replies -> for testing without API keys.
    Keyword detection matches Arabic phrases (since real customers write
    in Arabic), but replies are hardcoded in English for now.
 2) Real Mode: uses Groq (Llama 3) to generate dynamic, intelligent replies.
@@ -40,7 +38,7 @@ class SalesAgent:
         self.mock_mode = settings.is_mock_mode
 
     def _mock_reply(self, user_text: str) -> str:
-        """Simple rule-based reply for testing without real API keys."""
+        """reply for testing without real API keys."""
         text = user_text.lower()
 
         price_keywords = ["سعر", "تكلفة", "price", "cost"]
@@ -51,7 +49,7 @@ class SalesAgent:
         if any(word in text for word in price_keywords):
             return "Our basic plan starts at $99/month and includes all the tools you need. Want me to book a call with our sales team?"
         elif any(word in text for word in greeting_keywords):
-            return "Hi there! 👋 This is the AI sales assistant. How can I help you today?"
+            return "Hi there! This is the AI sales assistant. How can I help you today?"
         elif any(word in text for word in booking_keywords):
             return "Sure! What day and time works best for you?"
         elif any(word in text for word in rejection_keywords):
